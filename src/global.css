@@ -353,3 +353,7 @@ template {
 button {
   border: none;
 }
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+}

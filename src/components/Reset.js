@@ -12,7 +12,12 @@ function Reset() {
     setWinner('');
   }
   return (
-    <button className="Reset" type="button" onClick={handleClick}>
+    <button
+      className="Reset"
+      type="button"
+      onClick={handleClick}
+      title="recomeçar o jogo"
+    >
       <FaUndo />
     </button>
   );

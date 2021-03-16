@@ -8,14 +8,15 @@ import Player from './Player';
 import Square from './Square';
 import Reset from './Reset';
 import Winner from './Winner';
+import MovesHistory from './MovesHistory';
 
 function Board() {
-  const { squares, setWinner } = React.useContext(GameContext);
+  const { squares, setWinner, movesHistory } = React.useContext(GameContext);
 
   const winner = calculateWinner(squares);
   React.useEffect(() => {
     if (winner) setWinner(winner);
-  }, [squares]);
+  }, [movesHistory, squares, setWinner]);
 
   return (
     <div className="Content">
@@ -29,6 +30,8 @@ function Board() {
           <Square value={value} index={index} key={uuid()} />
         ))}
       </div>
+      <p>Ir para jogada:</p>
+      <MovesHistory />
     </div>
   );
 }

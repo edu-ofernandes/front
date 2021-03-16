@@ -3,9 +3,15 @@ import { GameContext } from '../context/GameContext';
 import './Square.css';
 
 function Square({ value, index }) {
-  const { squares, setSquares, xNext, setXNext, winner } = React.useContext(
-    GameContext
-  );
+  const {
+    squares,
+    setSquares,
+    xNext,
+    setXNext,
+    winner,
+    movesHistory,
+    setMovesHistory,
+  } = React.useContext(GameContext);
 
   function handleClick() {
     if (squares[index]) return;
@@ -15,6 +21,15 @@ function Square({ value, index }) {
     newSquare[index] = xNext ? 'X' : 'O';
     setSquares(newSquare);
     setXNext(!xNext);
+
+    setMovesHistory([
+      ...movesHistory,
+      {
+        squares: [...squares],
+        xNext: !xNext,
+        winner,
+      },
+    ]);
   }
   return (
     <button className="Square" type="button" onClick={handleClick}>

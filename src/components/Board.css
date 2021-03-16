@@ -2,7 +2,7 @@
   width: 650px;
   height: auto;
   text-align: center;
-  padding-top: 20px;
+  padding: 20px 10px;
 }
 .info {
   width: 100%;
@@ -14,8 +14,12 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 25px;
+}
+.Content p {
+  margin: 0;
+  font-size: 1.3rem;
 }

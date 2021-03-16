@@ -6,6 +6,7 @@ function GameContextProvider({ children }) {
   const [squares, setSquares] = React.useState(Array(9).fill(null));
   const [xNext, setXNext] = React.useState(true);
   const [winner, setWinner] = React.useState('');
+  const [movesHistory, setMovesHistory] = React.useState([]);
 
   const states = {
     squares,
@@ -14,6 +15,8 @@ function GameContextProvider({ children }) {
     setXNext,
     winner,
     setWinner,
+    movesHistory,
+    setMovesHistory,
   };
   return <GameContext.Provider value={states}>{children}</GameContext.Provider>;
 }
