@@ -1,0 +1,19 @@
+button.Square {
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  /* border: 5px solid rgba(230, 198, 21, 0.979); */
+  border-radius: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: darkslategrey;
+  color: aliceblue;
+}
+
+button.Square::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}

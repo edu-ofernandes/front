@@ -1,0 +1,12 @@
+button.Reset {
+  padding: 15px;
+  background-color: darkslategrey;
+  margin: 0px;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
