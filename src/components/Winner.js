@@ -3,10 +3,11 @@ import { GameContext } from '../context/GameContext';
 import './Winner.css';
 
 function Winner() {
-  const { winner } = React.useContext(GameContext);
+  const { winner, movesHistory } = React.useContext(GameContext);
 
   if (!winner) return <></>;
 
+  console.log(movesHistory);
   return <p className="Winner">{winner} Ganhou!</p>;
 }
 

@@ -8,7 +8,7 @@ function Game() {
   return (
     <GameContextProvider>
       <div className="Game">
-        <Board></Board>
+        <Board />
       </div>
     </GameContextProvider>
   );

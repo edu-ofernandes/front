@@ -32,7 +32,12 @@ function Square({ value, index }) {
     ]);
   }
   return (
-    <button className="Square" type="button" onClick={handleClick}>
+    <button
+      className="Square"
+      type="button"
+      onClick={handleClick}
+      title={value}
+    >
       {value}
     </button>
   );

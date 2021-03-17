@@ -1,8 +1,9 @@
 import React from 'react';
 import './Board.css';
 import uuid from 'uuid/dist/v4';
+
 import { GameContext } from '../context/GameContext';
-import calculateWinner from '../config/calculateWinner';
+import calculateWinner from '../utils/calculateWinner';
 
 import Player from './Player';
 import Square from './Square';

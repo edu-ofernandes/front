@@ -8,12 +8,24 @@ button.Square {
   border-radius: 5px;
   font-size: 3rem;
   font-weight: bold;
-  background-color: darkslategrey;
+  background-color: hsl(180, 25%, 25%);
   color: aliceblue;
+  transition: 0.1s;
 }
 
 button.Square::after {
   content: '';
   display: block;
   padding-bottom: 100%;
+}
+
+button.Square:hover,
+button.Square:focus {
+  background: hsl(180, 25%, 25%);
+  box-shadow: 0 0 0 3px hsl(180, 50%, 16%), 0 0 0 4px hsl(180, 88%, 42%);
+  outline: none;
+}
+
+button.Square:active {
+  box-shadow: 0 0 0 3px hsl(180, 50%, 16%), 0 0 0 4px hsl(180, 88%, 42%);
 }
